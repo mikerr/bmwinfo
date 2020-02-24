@@ -8,7 +8,6 @@ import requests
 import os.path
 from datetime import datetime
 
-
 ROOT_URL   = "https://www.bmw-connecteddrive.co.uk"
 USER_AGENT = "MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)"
 
@@ -39,16 +38,13 @@ def obtainCredentials():
             #We want the access_token, token_type and expires_in from the Location querystring parameters
             location=r.headers["Location"]
 
-
             if location.startswith( "https://www.bmw-connecteddrive.com/app/default/static/external-dispatch.html" ):
-                #Parse the URL and querystring
                 d={}
 
                 parts=location.split("&")
                 for word in parts[1:]:
                     values=word.split("=")
                     d[values[0]]=values[1]
-                    #_log.debug("word=" +word)
 
                 access_token = parts[0].split("#")
                 for word in access_token[1:]:
@@ -77,11 +73,7 @@ def call( path):
         """
         Call the API at the given path.
         Argument should be relative to the API base URL, e.g:
-            print c.call('/user/vehicles/')
-        If a dictionary 'post_data' is specified, the request will be
-        a POST, otherwise a GET.
-        """
-        #
+            print call('/user/vehicles/')
         #if (time.time() > _TokenExpiry):
         #    obtainCredentials()
 
@@ -94,7 +86,6 @@ def call( path):
         r.raise_for_status()
         return r.json()
 
-
 # Initialization
 obtainCredentials()
 
@@ -103,15 +94,24 @@ mycar=vehicles[0]
 
 vin = mycar["vin"]
 modelName = mycar["modelName"]
-print ( modelName,vin)
 
+dynamic = call('/api/vehicle/dynamic/v1/'+vin+"?offset=0")
+attributes = dynamic["attributesMap"]
 
-#dynamic = call('/api/vehicle/dynamic/v1/'+vin+"?offset=0")
-#attributes = dynamic["attributesMap"]
+percent =  attributes["chargingLevelHv"]
+range =  attributes["beRemainingRangeElectric"]
 
-#percent =  attributes["chargingLevelHv"]
-#range =  attributes["beRemainingRangeElectric"]
-
+print ("Battery: " + percent + "% ( " + range + " miles )" )
 
 efficiency = call('/api/vehicle/efficiency/v1/'+vin)
-print ( efficiency )
+
+lastTrip = efficiency["lastTripList"]
+line = lastTrip[0]
+if (line["name"] == "LASTTRIP_DELTA_KM" ):
+   miles = line["lastTrip"] 
+
+line = lastTrip[2]
+if (line["name"] == "AVERAGE_ELECTRIC_CONSUMPTION" ):
+   mpk = line["lastTrip"] 
+
+print ("Last trip " + miles + " miles, efficiency: " + mpk + "mi/kWh")
