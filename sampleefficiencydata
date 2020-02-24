@@ -1,0 +1,42 @@
+{
+'communitySwitch': True, 
+'modelType': 'I3', 
+'scoreList': [{
+
+'attrName': 'AVERAGE_ELECTRIC_CONSUMPTION', 
+'attrUnit': 'MLS_PER_KWH', 
+'minValue': 2.7, 
+'averageValue': 3.8, 
+'maxValue': 10.0, 
+'lifeTime': 3.7}, 
+
+{'attrName': 'AVERAGE_RECUPERATED_ENERGY_PER_100_KM', 
+'attrUnit': 'MLS_PER_KWH', 
+'minValue': 5.7, 
+'averageValue': 19.7, 
+'maxValue': 50.0, 
+'lifeTime': 11.0}, 
+
+{'attrName': 'CUMULATED_ELECTRIC_DRIVEN_DISTANCE', 
+'attrUnit': 'MILE', 
+'minValue': 0.0, 
+'averageValue': 14236.1, 
+'maxValue': 65429.1, 
+'lifeTime': 5218.4}, 
+
+{'attrName': 'LONGEST_DISTANCE_WITHOUT_CHARGING', 
+'attrUnit': 'MILE', 
+'minValue': 0.0, 
+'averageValue': 110.7, 
+'maxValue': 167.8, 
+'lifeTime': 70.8}], 
+
+'lastTripList': [
+{'name': 'LASTTRIP_DELTA_KM', 'unit': 'MILE', 'lastTrip': '2.5'}, {
+'name': 'ACTUAL_DISTANCE_WITHOUT_CHARGING', 'unit': 'MILE', 'lastTrip': '7.5'}, {
+'name': 'AVERAGE_ELECTRIC_CONSUMPTION', 'unit': 'MLS_PER_KWH', 'lastTrip': '2.9'}, {
+'name': 'AVERAGE_RECUPERATED_ENERGY_PER_100_KM', 'unit': 'MLS_PER_KWH', 'lastTrip': '15.5'}, {
+'name': 'CUMULATED_ELECTRIC_DRIVEN_DISTANCE', 'unit': 'MILE', 'lastTrip': '5218.4'}], 
+
+'lifeTimeList': [], 'efficiencyQuotient': 22, 'characteristicList': [{'characteristic': 'TOTAL_CONSUMPTION', 'quantity': 0}, {'characteristic': 'AUXILIARY_CONSUMPTION', 'quantity': 0}, {'characteristic': 'DRIVING_MODE', 'quantity': 0}, {'characteristic': 'ACCELERATION', 'quantity': 2}, {'characteristic': 'ANTICIPATION', 'quantity': 2}]}
+
