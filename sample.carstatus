@@ -1,0 +1,19 @@
+{
+'series': 'I', 
+'basicType': 'I3 94', 
+'bodyType': 'Clubman', 
+'brand': 'BMWi', 
+'modelName': 'i3 94', 
+'vin': 'WBY7Z22000000000', 
+'licensePlate': None, 
+'modelYearNA': None, 
+'dcOnly': True, 
+'hasNavi': True, 
+'hasSunRoof': False, 
+'doorCount': 5, 
+'maxFuel': None, 
+'hasRex': False, 
+'steering': 'RIGHT', 
+'driveTrain': 'BEV', 
+'supportedChargingModes': ['AC_LOW', 'DC']
+}
