@@ -38,5 +38,10 @@
 'name': 'AVERAGE_RECUPERATED_ENERGY_PER_100_KM', 'unit': 'MLS_PER_KWH', 'lastTrip': '15.5'}, {
 'name': 'CUMULATED_ELECTRIC_DRIVEN_DISTANCE', 'unit': 'MILE', 'lastTrip': '5218.4'}], 
 
-'lifeTimeList': [], 'efficiencyQuotient': 22, 'characteristicList': [{'characteristic': 'TOTAL_CONSUMPTION', 'quantity': 0}, {'characteristic': 'AUXILIARY_CONSUMPTION', 'quantity': 0}, {'characteristic': 'DRIVING_MODE', 'quantity': 0}, {'characteristic': 'ACCELERATION', 'quantity': 2}, {'characteristic': 'ANTICIPATION', 'quantity': 2}]}
+'lifeTimeList': [], 'efficiencyQuotient': 22, 'characteristicList': [
+{'characteristic': 'TOTAL_CONSUMPTION', 'quantity': 0},
+{'characteristic': 'AUXILIARY_CONSUMPTION', 'quantity': 0},
+{'characteristic': 'DRIVING_MODE', 'quantity': 0},
+{'characteristic': 'ACCELERATION', 'quantity': 2},
+{'characteristic': 'ANTICIPATION', 'quantity': 2}]}
 
