@@ -50,10 +50,12 @@ def obtainCredentials():
                 for word in access_token[1:]:
                     values=word.split("=")
                     d[values[0]]=values[1]
-
-                AccessToken = d["access_token"] 
-                TokenExpiry = time.time() + float(d["expires_in"])
-                #saveCredentials()
+                        
+                if (d == {}):
+                    print ("Login error: check details")
+                else:
+                    AccessToken = d["access_token"] 
+                    TokenExpiry = time.time() + float(d["expires_in"])
 
             else:
                 print("locationHeader=" +location)
@@ -67,14 +69,7 @@ def obtainCredentials():
         return
 
 def call( path):
-        """
-        Call the API at the given path.
-        Argument should be relative to the API base URL, e.g:
-            print call('/user/vehicles/')
-        """
-        #if (time.time() > _TokenExpiry):
-        #    obtainCredentials()
-
+        
         headers = {"Authorization": "Bearer " + AccessToken,
                    "User-Agent":USER_AGENT}
 
@@ -86,6 +81,7 @@ def call( path):
 
 # Initialization
 obtainCredentials()
+if (AccessToken ==""): exit()
 
 vehicles = call('/api/me/vehicles/v2?all=true')
 mycar=vehicles[0]
