@@ -60,4 +60,6 @@ i3 94 WBY7Z220000000000
 'unitOfElectricConsumption': 'mls/kWh', 
 'Segment_LastTrip_time_segment_end': '24.02.2020 09:01:00 UTC', 
 'lastUpdateReason': 'VEHCSHUTDOWN_SECURED'}, 
-'vehicleMessages': {'ccmMessages': [{'text': 'Check tyre pressure. Initialise RDC', 'id': 142, 'status': 'NULL', 'messageType': 'CCM', 'unitOfLengthRemaining': '8448'}], 'cbsMessages': [{'description': 'Next change due at the latest by the stated date.', 'text': 'Brake fluid', 'id': 3, 'status': 'OK', 'messageType': 'CBS', 'date': '2020-05'}, {'description': 'Next visual inspection due when the stated distance has been covered or by the stated date.', 'text': 'Vehicle check', 'id': 17, 'status': 'OK', 'messageType': 'CBS', 'date': '2020-05'}]}}
+'vehicleMessages': {'ccmMessages': [{'text': 'Check tyre pressure. Initialise RDC', 'id': 142, 'status': 'NULL', 'messageType': 'CCM', 'unitOfLengthRemaining': '8448'}],
+'cbsMessages': [{'description': 'Next change due at the latest by the stated date.', 'text': 'Brake fluid', 'id': 3, 'status': 'OK', 'messageType': 'CBS', 'date': '2020-05'},
+{'description': 'Next visual inspection due when the stated distance has been covered or by the stated date.', 'text': 'Vehicle check', 'id': 17, 'status': 'OK', 'messageType': 'CBS', 'date': '2020-05'}]}}
