@@ -51,9 +51,6 @@ def obtainCredentials():
                     values=word.split("=")
                     d[values[0]]=values[1]
 
-                #We should now have a dictionary object with three entries
-                #token_type, access_token, expires_in
-
                 AccessToken = d["access_token"] 
                 TokenExpiry = time.time() + float(d["expires_in"])
                 #saveCredentials()
@@ -74,6 +71,7 @@ def call( path):
         Call the API at the given path.
         Argument should be relative to the API base URL, e.g:
             print call('/user/vehicles/')
+        """
         #if (time.time() > _TokenExpiry):
         #    obtainCredentials()
 
